@@ -1,0 +1,9 @@
+# Use postCreateCommand to install Node.js
+postCreateCommand: |
+  # Install Node.js using nvm (Node Version Manager)
+  export NVM_DIR="$HOME/.nvm"
+  mkdir -p $NVM_DIR
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+  . "$NVM_DIR/nvm.sh"
+  nvm install --lts
+  nvm use --lts
